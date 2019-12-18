@@ -9,6 +9,7 @@ sed -i '/AuthorizedKeysCommandUser /s/.*/AuthorizedKeysCommandUser root/g' /etc/
 yum update -y aws-cfn-bootstrap
 yum install -y aws-cli
 # Install pip and python dev libraries.
-yum install -y python27-devel python27-pip gcc
+yum upgrade python-setuptools
+yum install python-pip python-wheel -y
 pip install boto3
 pip install pycryptodome
